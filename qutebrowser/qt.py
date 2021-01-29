@@ -20,4 +20,7 @@
 """Wrappers around Qt/PyQt code."""
 
 # pylint: disable=unused-import
-from PyQt5 import sip
+try:
+    from PyQt5 import sip
+except ImportError:
+    import sip
